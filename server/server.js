@@ -2,8 +2,10 @@ const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
 const UserModel = require('./models/Users');
+const cors = require('cors');
 
 app.use(express.json());
+app.use(cors());
 
 mongoose.connect(
     `mongodb+srv://rthomasdeveloper:Hockey$11@mern-tut-cluster0.mcjkt.mongodb.net/`
